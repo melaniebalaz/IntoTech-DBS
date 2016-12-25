@@ -1,0 +1,292 @@
+body h1,h2,h3,h4{
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+blockquote {
+    font-size:2em;
+    color:#E3B505;
+    border:none;
+    padding-top:30px;
+}
+
+
+.btn-lg {
+    color:#045A95;
+    background-color:#F1C40F;
+    -webkit-box-shadow: inset 0 -3px #e2b607;
+    box-shadow: inset 0 -3px #e2b607;
+}
+
+
+.btn-lg:hover {
+    color:white;
+}
+
+.padding-style{
+    padding:30px;
+}
+
+.container-fluid {
+    padding-bottom:20px;
+}
+
+.container {
+    padding-top:20px;
+    width:70%;
+}
+
+/**TEXT STYLES**/
+
+.text-yellow{
+    color:#E3B505;
+}
+
+.section-lead {
+    color:#E3B505;
+}
+
+.text-bold {
+    color:black;
+    font-weight:500;
+    font-size:1.3em;
+}
+
+.intro-heading {
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 15px #000000;
+    font-size: 3.5em;
+    line-height: 75px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    color:white;
+}
+
+.intro-lead-in-bigger {
+    font-size: 1.7em;
+}
+
+.intro-lead-in {
+    text-shadow: 0 0 15px #000000;
+    letter-spacing:0.2em;
+     font-size: 1.6em;
+     line-height: 20px;
+     margin-bottom: 60px;
+     color:#DDEAF0;
+ }
+
+.intro-subtext {
+    font-size:1.6em;
+    color:white;
+}
+
+.alert-info {
+    font-size:1.3em;
+    background-color:rgba(255,255,255, 0.5);
+    border-color:white;
+    color:#33373E;
+}
+
+
+
+/** QUOTE SECTION **/
+.quote-bg {
+    background: url("/img/rainbow.png");
+}
+
+/**TEAM PAGE**/
+.team-info{
+    background: rgba(255,255,255, 0.8);
+}
+
+/**INPUT FORM**/
+
+.form-check-label {
+
+}
+
+/**NAVBAR**/
+
+
+.navbar-brand {
+    padding:0;
+    height:60px;
+}
+
+.navbar-brand>img {
+    height: 100%;
+    width: auto;
+}
+
+
+.navbar {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    padding:10px;
+    background-color:transparent;
+    border-bottom:1px solid #196DA9;
+    border-top:none;
+    border-right:none;
+    border-left:none;
+    margin-bottom:0;
+    border-radius:0;
+}
+
+
+.nav-text{
+    font-family: 'Orbitron', sans-serif;
+    color:#E3B505;
+    letter-spacing:0.2em;
+    font-size: 1.1em;
+}
+
+.nav-text:hover {
+    color:#A6E1FA;
+}
+
+
+/**BUTTON**/
+
+
+hr {
+    border-top: 2px solid #CDCCC7;
+    width:100px;
+}
+
+/**HEADER SECTION**/
+
+.image-bg-fluid-height {
+    padding-top:150px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-color:#045896;
+    height: 100vh;
+}
+
+.home-bg{
+    background-image:url("/img/bg.jpg");
+    background-attachment: fixed;
+}
+
+
+.team-bg {
+    background:url("/img/stardust.png") repeat;
+
+}
+
+.team-header .intro-heading{
+    color:#333;
+}
+
+.team-header .intro-lead-in{
+    color:#333;
+}
+
+/**SECTION SIGNUP **/
+
+
+.signup-bg {
+    background-image:url("/img/bg.jpg");
+    background-attachment: fixed;
+    color:white;
+}
+
+.section-paragraph {
+    font-size: 1.5em;
+}
+
+.section-heading {
+    font-size:2.7em;
+}
+
+.section-heading-blue {
+    color:#3A4148;
+}
+
+/**SECTION ABOUT **/
+
+.about-bg {
+    background-color:white;
+}
+
+.about-bg .icon {
+    font-size:6em;
+    color:#E3B505;
+}
+
+.glasses-icon {
+    width:50px;
+    height:auto;
+}
+
+.icon-subtext {
+    font-size:1.4em;
+    font-weight:lighter;
+}
+
+
+/**SECTION SPEAKERS **/
+
+.speakerImg {
+    width:250px;
+    height:auto;
+}
+
+.figure-caption {
+    color:#E3B505;
+    font-size:1.3em;
+    padding-top:10px;
+}
+
+
+.speakers-bg{
+
+}
+
+/** SECTION SPONSORS **/
+
+.sponsors-bg {
+    background: white;
+}
+
+
+/** TEAM-BG **/
+
+.section-lead-team{
+    padding-top:20px;
+    font-size:2.2em;
+}
+
+/**FOOTER**/
+
+footer {
+    position: relative;
+    bottom:0;
+    margin:0;
+    padding:20px;
+    background-color:#333333;
+    color:lightgray;
+    font-size:1.1em;
+}
+
+footer a {
+    color:white;
+}
+
+footer a:hover {
+    color:#A3C4BD;
+    text-decoration:none;
+}
+
+footer h2 {
+    font-size:1.6em;
+}

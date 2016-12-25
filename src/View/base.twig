@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>{% if pagetitle %}{{ pagetitle }} ≫ {% endif %}IntoTech </title>
+
+    <meta name="description" content="">
+    <meta name="author" content="Melanie Balaz">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/css/full-width-pics.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/css/custom.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+<body class="light">
+{% block body %}
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand">
+                <a href="/">
+                    <img class="img-responsive" src="/img/logo.png">
+                </a>
+            </div>
+        </div>
+        <div class="container ">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/location">
+                            <p class="nav-text">
+                                Location
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/program">
+                            <p class="nav-text">
+                                Program
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                    <a href="/workshops">
+                        <p class="nav-text">
+                            Workshops
+                        </p></a>
+                    </li>
+                    <li>
+                        <a href="/team">
+                            <p class="nav-text">
+                                Team
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- Footer -->
+    <footer class="footer-bg">
+        <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <p> <a href="/"> Home </a> </p>
+                        <p> <a href="/location">Location </a> </p>
+                        <p> <a href="/program">Program </a> </p>
+                        <p> <a href="/workshops">Workshops </a> </p>
+                        <p> <a href="/team">Team </a> </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p> <a href="/terms"> Terms & Conditions </a> </p>
+                        <p> <a href="/terms"> Contact us </a> </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <a href="">
+                            <p>
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                Facebook
+                            </p>
+                        </a>
+                        <a href="">
+                            <p>
+                                <i class="fa fa-twitter" aria-hidden="true"> </i>
+                                Twitter
+                            </p>
+                        </a>
+
+                    </div>
+                </div>
+            <br>
+            <br>
+            <p>Made with <i class="fa fa-heart" aria-hidden="true" style="color:#A3C4BD"></i>
+                by Melanie Balaz 2016</p>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </footer>
+
+{% endblock %}
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<script src="js/custom.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+{% extends "base.twig" %}
+
+{% set pagetitle = 'Home' %}
+
+{% block content %}
+
+    <!-- Full Width Image Header with Logo -->
+    <!-- Image backgrounds are set within the full-width-pics.css file. -->
+    <header class="container-fluid image-bg-fluid-height home-bg">
+            <div class="intro-heading">IntoTech</div>
+        <div class="intro-lead-in"> Not your ordinary IT conference</div>
+            <div class="intro-lead-in">
+                <span class="intro-lead-in-bigger"> 30.09.2017 </span>
+                <span class="text-yellow"> #intotech </span>
+
+            </div>
+            <br>
+            <a href="#signup" >
+                <div class="btn btn-lg">
+                    SIGN UP NOW
+                </div>
+            </a>
+    </header>
+
+    <!-- Content Section -->
+    <!-- If I want this info from the database I probably got a do a for each thing -->
+    <div class="container-fluid about-bg text-center">
+        <div class="container">
+            <h1 class="section-heading">About IntoTech</h1>
+            <p class="lead section-lead">Made by geeks, for geeks.</p>
+            <img src="/img/glasses.png" class="img-responsive center-block glasses-icon">
+            <p class="section-paragraph text-bold">
+                 You have always been curious about technology? You just got started with studying IT and are a bit lost?
+                Come and get inspired, meet the IT community and get into technology at our 2 day event in Vienna.
+                It is completely free, you just need to <a href="#signup"> register </a> until the 20.09.2017.
+            </p>
+            <br><br>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <i class="fa fa-magic icon" aria-hidden="true"></i>
+                <br>
+                <p class="section-paragraph">
+                    <span class="text-bold">
+                        Get Inspired
+                    </span>
+                </p>
+                <p class="icon-subtext">Listen to carefully chosen Talks,
+                    that beginners can understand and professionals find inspiring. </p>
+            </div>
+            <div class="col-md-4">
+                <i class="fa fa-comments icon" aria-hidden="true"></i>
+                <br>
+                <p class="section-paragraph">
+                    <span class="text-bold">
+                        Get in Touch
+                    </span>
+                </p>
+                <p class="icon-subtext">
+                    Talk to eachother. Need help with your project, got an idea and need a starting point?
+                    We will give you the space to meet the community and get involved.
+
+                </p>
+            </div>
+            <div class="col-md-4">
+                <i class="fa fa-code icon" aria-hidden="true"></i>
+                <br>
+                <p class="section-paragraph">
+                    <span class="text-bold">
+                        Get Started
+                    </span>
+                </p>
+                <p class="icon-subtext">
+                   We are offering Workshops,
+
+                </p>
+            </div>
+        </div>
+        <div class="container">
+
+            <blockquote class="text-center">
+                <i class="fa fa-quote-left" aria-hidden="true"></i>
+                To not see computers as mechanical,
+                and lonely and boring and magic.
+                To see them as things they can tinker, and turn around, and twist,.. <br> <br>
+                <small> Linda Liukas, TEDX </small>
+            </blockquote>
+        </div>
+    </div>
+
+    <!-- QUOTE SECTION -->
+
+    <div class="container-fluid quote-bg">
+        <div class="container">
+        </div>
+    </div>
+
+
+
+    <!-- TALKS Section -->
+    <div class="container-fluid speakers-bg text-center">
+        <div class="container">
+            <h1 class="section-heading">Talks</h1>
+            <p class="section-paragraph">
+                <span class="text-bold">
+                    These are the people who will speak at one of our three stages. <br>
+                </span>
+                Details about the program will be released <a href="/program"> here </a>
+            </p>
+            <hr>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <figure class="figure">
+                        <img class="speakerImg figure-img img-responsive" src="img/avatar.png">
+                        <figcaption class="figure-caption">NAME OF THE SPEAKER</figcaption>
+                    </figure>
+                </div>
+                <div class="col-sm-4">
+                    <figure class="figure">
+                        <img class="speakerImg figure-img img-responsive" src="img/avatar.png">
+                        <figcaption class="figure-caption">NAME OF THE SPEAKER</figcaption>
+                    </figure>
+                </div>
+                <div class="col-sm-4">
+                    <figure class="figure">
+                        <img class="speakerImg figure-img img-responsive" src="img/avatar.png">
+                        <figcaption class="figure-caption">NAME OF THE SPEAKER</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+
+
+    <!-- Signup Section -->
+    <div class="container-fluid signup-bg text-center" id="signup">
+        <div class="container">
+            <h1 class="section-heading">Interested? Sign up now</h1>
+            <p class="lead section-lead">
+                There are
+                <span class="text-white">
+                {{ remainingTickets }}
+                </span>
+                tickets left
+            </p>
+
+            <!-- NAME & EMAIl -->
+            <form class="form-group">
+                <input id="inputName" type="text" name="name" class="form-control text-center input-lg" placeholder="Enter Name" value="" required/>
+                <br>
+                <input id="inputEmail" type="email" name="email" class="form-control text-center input-lg" placeholder="Enter Email Address" value="" required/>
+                <br>
+                <div class="boardAlert">
+                    <div class="alert alert-info" role="alert">
+                        <strong> Optional: </strong> Choose which workshop you would like to participate in (only one).
+                        <br>
+                        You can find detailed information about each workshop <a href="/workshops"> here </a>
+                    </div>
+                </div>
+
+                <!-- WORKSHOPS -->
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="workshop" id="arduino" value="arduino">
+                        Arduino Workshop
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="workshop" id="vr" value="vr">
+                        VR Workshop
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="workshop" id="css" value="css">
+                        CSS Workshop
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="workshop" id="none" value="none" checked>
+                        None
+                    </label>
+                </div>
+                <!-- END WORKSHOPS -->
+                <hr>
+                <button type="submit" class="btn btn-lg" id="signup-btn">
+                    SIGN UP
+                </button>
+            </form>
+
+
+
+
+            <!-- SUCCESSFULL SIGNUP MODAL -->
+            <div class="modal fade" id="successSignUp" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <p class="lead section-lead-team">
+                                Congratulations!
+                            </p>
+                        </div>
+                        <div class="modal-body">
+                            <p class="section-paragraph">You successfully registrated! See you on 30.09.2017!</p>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+            <!-- -->
+
+        </div>
+    </div>
+
+    <!-- Sponsors Section -->
+    <div class="container-fluid">
+        <div class="container">
+            <p class="section-paragraph text-bold text-justify">
+                IntoTech was organised fully in their free time by this lovely <a href="/team"> team </a>. Some of us are students,
+                some of sure employees, but we all share a common passion for learning, teaching and building technology.
+                We believe in sharing knowledge regardless of financial status or gender and we worked very hard to
+                build this conference from zero. However we could have not done it without our many sponsors.
+            </p>
+            <hr>
+        </div>
+    </div>
+
+{% endblock %}
