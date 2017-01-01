@@ -24,4 +24,10 @@ class IndexController extends AbstractController {
 	public function program(){
 		return [];
 	}
+
+	public function register(){
+		//Save the post body to db
+
+		return [];
+	}
 }

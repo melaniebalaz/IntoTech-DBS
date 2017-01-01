@@ -1,3 +1,14 @@
+
+This project is using the [PHP Boilerplate](https://github.com/janoszen/university-php-boilerplate) 
+by [Janos Pasztor](https://github.com/janoszen) and is both a University semester project for the Database 
+systems class and the starting point for the website of the conference "IntoTech" I am co-organizing.
+
+For handing in the project I will have to use an Oracle Database (Uni requirement), but I will later on switch
+to an open-source db. The project is structured in a way that the exchange can be done without
+rewriting too much code.
+
+Infos about the Boilerplate from the original readme:
+
 # PHP boilerplate for simple university projects
 
 This codebase is intended for a simple, frameworkless boilerplate for university projects. It uses a small number of 

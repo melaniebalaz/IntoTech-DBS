@@ -53,7 +53,8 @@ return [
 				['GET', '/', IndexController::class, 'index'],
 				['GET', '/team', IndexController::class, 'team'],
 				['GET', '/workshops', IndexController::class, 'workshops'],
-				['GET', '/program', IndexController::class, 'program']
+				['GET', '/program', IndexController::class, 'program'],
+				['POST', '/register', IndexController::class, 'register']
 			]
 		],
 		/**
