@@ -9,6 +9,11 @@ $('#signup-btn').click(function(){
 });
 */
 
+$('#signup-btn').submit(function( event ) {
+    createAjaxCallForSignUp();
+    event.preventDefault();
+});
+
 function findChosenWorkshop(){
     var workshop;
     $(':radio:checked').each(function(){
@@ -16,29 +21,6 @@ function findChosenWorkshop(){
     });
     return workshop;
 }
-
-function checkSignUpEntries(){
-    $('.notAValid').show();
-
-    var checkBool = true;
-    //Check if everything has been filled out correctly
-    if ($('#inputName').val().length == 0){
-        $('#nameChecker').text("Please enter a name!");
-        checkBool = false;
-    }
-    else {
-        $('#nameChecker').empty();
-    }
-    if ($('#inputEmail').val().length == 0){
-        $('#emailChecker').text("Please enter an email address");
-        checkBool = false;
-    }
-    else {
-        $('#emailChecker').empty();
-    }
-    return checkBool;
-}
-
 
 function createAjaxCallForSignUp() {
 
@@ -62,7 +44,7 @@ function createAjaxCallForSignUp() {
         type: 'post',
         dataType: 'json',
         success: function (data) {
-            //portray success modal
+            $('successSignUp').modal('show');
         },
         error: function() {
             //portray error modal
