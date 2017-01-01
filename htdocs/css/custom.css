@@ -1,5 +1,5 @@
 body h1,h2,h3,h4{
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Righteous', cursive;
 }
 
 body {
@@ -56,11 +56,11 @@ blockquote {
 .text-bold {
     color:black;
     font-weight:500;
-    font-size:1.3em;
+    font-size:1.2em;
 }
 
 .intro-heading {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Righteous', cursive;
     text-shadow: 0 0 15px #000000;
     font-size: 3.5em;
     line-height: 75px;
@@ -95,10 +95,7 @@ blockquote {
 }
 
 
-/**TEAM PAGE**/
-.team-info{
-    background: rgba(255,255,255, 0.8);
-}
+
 
 /**INPUT FORM**/
 
@@ -137,14 +134,14 @@ blockquote {
 
 
 .nav-text{
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Righteous', cursive;
     color:#E3B505;
     letter-spacing:0.2em;
     font-size: 1.1em;
 }
 
 .nav-text:hover {
-    color:#A6E1FA;
+    color:#CDCCC7;
 }
 
 
@@ -171,6 +168,9 @@ hr {
     background-attachment: fixed;
 }
 
+.intro-heading {
+    text-transform: none;
+}
 
 .team-bg {
     background:url("/img/stardust.png") repeat;
@@ -255,7 +255,12 @@ hr {
 
 /** TEAM-BG **/
 
+.team-info{
+    background: rgba(255,255,255, 0.8);
+}
+
 .section-lead-team{
+    font-family: 'Righteous', cursive;
     padding-top:60px;
     font-size:1.9em;
 }
@@ -269,6 +274,10 @@ hr {
 }
 
 .team-icons a:hover {
+    color:#A3C4BD;
+}
+
+.team-icons a {
     color:#E3B505;
 }
 

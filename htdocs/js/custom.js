@@ -40,7 +40,7 @@ function createAjaxCallForSignUp() {
     var jsonString = JSON.stringify(data);
 
     $.ajax({
-        url: '/signup.php',
+        url: '/register',
         type: 'post',
         dataType: 'json',
         success: function (data) {
