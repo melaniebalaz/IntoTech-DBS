@@ -3,7 +3,7 @@ body h1,h2,h3,h4{
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 a:hover {
@@ -256,8 +256,20 @@ hr {
 /** TEAM-BG **/
 
 .section-lead-team{
-    padding-top:20px;
-    font-size:2.2em;
+    padding-top:60px;
+    font-size:1.9em;
+}
+
+.section-paragraph-team {
+    font-size:1.3em;
+}
+
+.team-icons {
+    font-size:2.0em;
+}
+
+.team-icons a:hover {
+    color:#E3B505;
 }
 
 /**FOOTER**/
