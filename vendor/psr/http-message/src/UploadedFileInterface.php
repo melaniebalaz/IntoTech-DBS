@@ -31,7 +31,7 @@ interface UploadedFileInterface
     public function getStream();
 
     /**
-     * Move the uploaded file to a new location.
+     * Move the uploaded file to a new location.twig.
      *
      * Use this method as an alternative to move_uploaded_file(). This method is
      * guaranteed to work in both SAPI and non-SAPI environments.

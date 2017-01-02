@@ -4,23 +4,40 @@
 namespace Melanie\Conference\Model;
 
 
+use InvalidArgumentException;
 use PDO;
 
 class AttendantModel {
-	/**
-	 * @var PDO
-	 */
-	private $pdo;
+
+	private $name;
+	private $email;
+	private $workshop;
+
+	public function __construct(string $name, string $email, string $workshop) {
+		$this->name  = $name;
+		$this->email = $email;
+		$this->workshop = $workshop;
+	}
 
 	/**
-	 * @param PDO $pdo
+	 * @return string
 	 */
-	/*public function __construct(PDO $pdo) {
-		$this->pdo = $pdo;
-	}*/
+	public function getName(): string {
+		return $this->name;
+	}
 
-	public function getAttendantCount(){
-		return 10;
+	/**
+	 * @return string
+	 */
+	public function getEmail(): string {
+		return $this->email;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getWorkshop() {
+		return $this->workshop;
 	}
 
 }

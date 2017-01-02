@@ -80,7 +80,7 @@ interface StreamInterface
      * @param int $whence Specifies how the cursor position will be calculated
      *     based on the seek offset. Valid values are identical to the built-in
      *     PHP $whence values for `fseek()`.  SEEK_SET: Set position equal to
-     *     offset bytes SEEK_CUR: Set position to current location plus offset
+     *     offset bytes SEEK_CUR: Set position to current location.twig plus offset
      *     SEEK_END: Set position to end-of-stream plus offset.
      * @throws \RuntimeException on failure.
      */

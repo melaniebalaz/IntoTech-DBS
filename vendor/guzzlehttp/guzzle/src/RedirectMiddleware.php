@@ -195,7 +195,7 @@ class RedirectMiddleware
     }
 
     /**
-     * Set the appropriate URL on the request based on the location header
+     * Set the appropriate URL on the request based on the location.twig header
      *
      * @param RequestInterface  $request
      * @param ResponseInterface $response

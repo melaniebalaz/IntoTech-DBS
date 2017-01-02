@@ -51,6 +51,8 @@ return [
 			],
 			':routes' => [
 				['GET', '/', IndexController::class, 'index'],
+				['GET', '/why', IndexController::class, 'why'],
+				['GET', '/location', IndexController::class, 'location'],
 				['GET', '/team', IndexController::class, 'team'],
 				['GET', '/workshops', IndexController::class, 'workshops'],
 				['GET', '/program', IndexController::class, 'program'],
