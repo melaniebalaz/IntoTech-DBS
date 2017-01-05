@@ -142,7 +142,7 @@
             </p>
 
             <!-- NAME & EMAIl -->
-            <form class="form-group">
+            <form class="form-group" id="signup-form">
                 <input id="inputName" type="text" name="name" class="form-control text-center input-lg" placeholder="Enter Name" value="" required/>
                 <br>
                 <input id="inputEmail" type="email" name="email" class="form-control text-center input-lg" placeholder="Enter Email Address" value="" required/>
@@ -202,6 +202,25 @@
                         </div>
                         <div class="modal-body">
                             <p class="section-paragraph">You successfully registrated! See you on 30.09.2017!</p>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+            <!-- -->
+
+
+            <!-- SUCCESSFULL SIGNUP MODAL -->
+            <div class="modal fade" id="errorSignUp" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <p class="lead section-lead-team">
+                                Oh noes, an error occured!
+                            </p>
+                        </div>
+                        <div class="modal-body">
+                            <p class="section-paragraph">Something went wrong when trying to save your registration, please try again!</p>
                         </div>
                     </div><!-- /.modal-content -->
                 </div><!-- /.modal-dialog -->

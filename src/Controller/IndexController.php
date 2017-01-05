@@ -5,6 +5,7 @@ namespace Melanie\Conference\Controller;
 use Melanie\Conference\Logic\AttendantLogic;
 use Melanie\Conference\Model\AttendantModel;
 use Melanie\Conference\Model\SampleModel;
+use Melanie\Conference\Storage\StorageInterface;
 use Psr\Http\Message\RequestInterface;
 
 class IndexController {
@@ -44,12 +45,22 @@ class IndexController {
 	}
 
 	public function register(RequestInterface $request){
-		$newAttendant = $this->attendantLogic->fromArray(json_decode($request->getBody(), true));
-		//now save the new attendant to the storage, in a try-catch block
-
+		$newAttendant = json_decode($request->getBody(), true);
+		if (json_last_error()){
+			return json_encode(['success' => false]);
+		}
+		foreach (['name','email','workshop'] as $key){
+			if (!array_key_exists($key,$newAttendant)){
+				return json_encode(['success' => false]);
+			}
+		}
 		//if all goes well
-		return json_encode(['success' => true]);
+		try{
+			$this->attendantLogic->registerAttendant($newAttendant['name'],$newAttendant['email'],$newAttendant['workshop']);
+			return json_encode(['success' => true]);
 
-		//if all doesnt go well return false
+		} catch (\Exception $e) {
+			return json_encode(['success' => false]);
+		}
 	}
 }

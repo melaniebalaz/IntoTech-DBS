@@ -9,9 +9,9 @@ $('#signup-btn').click(function(){
 });
 */
 
-$('#signup-btn').submit(function( event ) {
-    createAjaxCallForSignUp();
+$('#signup-form').submit(function(event) {
     event.preventDefault();
+    createAjaxCallForSignUp();
 });
 
 function findChosenWorkshop(){
@@ -41,13 +41,13 @@ function createAjaxCallForSignUp() {
 
     $.ajax({
         url: '/register',
-        type: 'post',
-        dataType: 'json',
+        method: 'post',
+        contentType: 'json',
         success: function (data) {
             $('successSignUp').modal('show');
         },
         error: function() {
-            //portray error modal
+            $('errorSignUp').modal('show');
         },
         data: jsonString
     });

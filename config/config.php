@@ -1,10 +1,12 @@
 <?php
 
+use GuzzleHttp\Psr7\Request;
 use Melanie\Conference\Controller\ErrorController;
 use Melanie\Conference\Controller\IndexController;
 use Melanie\Conference\Core\DatabaseMigrationProcessor;
 use Melanie\Conference\Core\Router;
 use Melanie\Conference\Model\Migration\SampleMigration;
+use Psr\Http\Message\RequestInterface;
 
 /**
  * This is the configuration for the Auryn dependency injector. It is processed by the FrontController
@@ -33,7 +35,8 @@ return [
 	 * ```
 	 */
 	'interfaceImplementations' => [
-
+		\Melanie\Conference\Storage\StorageInterface::class => \Melanie\Conference\Storage\DatabaseImplementation::class,
+		RequestInterface::class => Request::class
 	],
 	/**
 	 * Provide the class constructor parameters here. Remember, these are named parameters only, if you need classes,
@@ -74,7 +77,8 @@ return [
 		 */
 		DatabaseMigrationProcessor::class => [
 			':migrations' => [
-				SampleMigration::class
+				SampleMigration::class,
+				\Melanie\Conference\Storage\Migration\OracleCreateMigration::class
 			]
 		]
 	],

@@ -74,7 +74,7 @@ label {
     font-size: 3.5em;
     line-height: 75px;
     margin-bottom: 25px;
-    text-transform: uppercase;
+    text-transform: none;
     color:white;
 }
 
@@ -150,7 +150,7 @@ label {
 }
 
 .nav-text:hover {
-    color:#CDCCC7;
+    color:white;
 }
 
 
@@ -173,26 +173,18 @@ hr {
 }
 
 .home-bg{
-    background-image:url("/img/bg.jpg");
-    background-attachment: fixed;
+    background:url("/img/bg.jpg") top center no-repeat fixed;
 }
 
-.intro-heading {
-    text-transform: none;
+
+.talk-bg {
+    background:url("/img/talk-bg.png") top center no-repeat fixed;
 }
 
-.team-bg {
-    background:url("/img/stardust.png") repeat;
-
+.workshop-bg {
+    background:url("/img/workshop_bg.png") top center no-repeat fixed;
 }
 
-.team-header .intro-heading{
-    color:#333;
-}
-
-.team-header .intro-lead-in{
-    color:#333;
-}
 
 .intro-header-icons a{
     color:white;
@@ -272,13 +264,20 @@ hr {
 
 /** TEAM-BG **/
 
-.team-info{
-    background: rgba(255,255,255, 0.8);
+.team-header {
+    background-color:#045896;
+
+}
+
+.team-bg {
+    background-color:#045896;
+    color:#D2D3D5;
 }
 
 .section-lead-team{
+    color:white;
     font-family: 'Righteous', cursive;
-    padding-top:60px;
+    padding-top:30px;
     font-size:1.9em;
 }
 
@@ -287,7 +286,7 @@ hr {
 }
 
 .team-icons a:hover {
-    color:#A3C4BD;
+    color:white;
 }
 
 .team-icons a {
@@ -311,7 +310,7 @@ footer a {
 }
 
 footer a:hover {
-    color:#A3C4BD;
+    color:#E3B505;
     text-decoration:none;
 }
 
