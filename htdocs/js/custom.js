@@ -43,11 +43,11 @@ function createAjaxCallForSignUp() {
         url: '/register',
         method: 'post',
         contentType: 'json',
-        success: function (data) {
-            $('successSignUp').modal('show');
+        success: function () {
+            $('#successSignUp').modal('show');
         },
         error: function() {
-            $('errorSignUp').modal('show');
+            $('#errorSignUp').modal('show');
         },
         data: jsonString
     });

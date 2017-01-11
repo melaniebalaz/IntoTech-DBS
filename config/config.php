@@ -1,12 +1,12 @@
 <?php
 
-use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Psr7\ServerRequest;
 use Melanie\Conference\Controller\ErrorController;
 use Melanie\Conference\Controller\IndexController;
 use Melanie\Conference\Core\DatabaseMigrationProcessor;
 use Melanie\Conference\Core\Router;
 use Melanie\Conference\Model\Migration\SampleMigration;
-use Psr\Http\Message\RequestInterface;
+use Psr\Http\Message\ServerRequestInterface;
 
 /**
  * This is the configuration for the Auryn dependency injector. It is processed by the FrontController
@@ -36,7 +36,7 @@ return [
 	 */
 	'interfaceImplementations' => [
 		\Melanie\Conference\Storage\StorageInterface::class => \Melanie\Conference\Storage\DatabaseImplementation::class,
-		RequestInterface::class => Request::class
+		ServerRequestInterface::class => ServerRequest::class
 	],
 	/**
 	 * Provide the class constructor parameters here. Remember, these are named parameters only, if you need classes,
@@ -68,16 +68,21 @@ return [
 		 * @see http://php.net/manual/en/pdo.prepared-statements.php
 		 */
 		PDO::class => [
-			':dsn'      => 'mysql:host=localhost;dbname=test',
-			':username' => 'root',
+			':dsn'      => '',
+			':username' => '',
 			':passwd'   => '',
+			/**
+			':dsn'      => 'oci:dbname =131.130.122.23:1521/lab',
+			':username' => 'a1507236',
+			':passwd'   => 'afk600per',
+			 * **/
 		],
 		/**
 		 * Database migration classes.
 		 */
+
 		DatabaseMigrationProcessor::class => [
 			':migrations' => [
-				SampleMigration::class,
 				\Melanie\Conference\Storage\Migration\OracleCreateMigration::class
 			]
 		]

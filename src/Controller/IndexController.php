@@ -7,6 +7,7 @@ use Melanie\Conference\Model\AttendantModel;
 use Melanie\Conference\Model\SampleModel;
 use Melanie\Conference\Storage\StorageInterface;
 use Psr\Http\Message\RequestInterface;
+use Psr\Http\Message\ServerRequestInterface;
 
 class IndexController {
 
@@ -44,7 +45,7 @@ class IndexController {
 		return [];
 	}
 
-	public function register(RequestInterface $request){
+	public function register(ServerRequestInterface $request){
 		$newAttendant = json_decode($request->getBody(), true);
 		if (json_last_error()){
 			return json_encode(['success' => false]);
