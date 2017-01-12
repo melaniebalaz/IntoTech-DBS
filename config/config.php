@@ -68,23 +68,16 @@ return [
 		 * @see http://php.net/manual/en/pdo.prepared-statements.php
 		 */
 		PDO::class => [
-			':dsn'      => '',
-			':username' => '',
-			':passwd'   => '',
-			/**
 			':dsn'      => 'oci:dbname =131.130.122.23:1521/lab',
 			':username' => 'a1507236',
 			':passwd'   => 'afk600per',
-			 * **/
 		],
 		/**
 		 * Database migration classes.
 		 */
 
 		DatabaseMigrationProcessor::class => [
-			':migrations' => [
-				\Melanie\Conference\Storage\Migration\OracleCreateMigration::class
-			]
+
 		]
 	],
 ];

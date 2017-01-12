@@ -18,6 +18,7 @@ class DatabaseImplementation implements StorageInterface {
 	 * @param PDO $pdo
 	 */
 
+
 	public function __construct(PDO $pdo) {
 		$this->pdo = $pdo;
 	}
@@ -33,7 +34,6 @@ class DatabaseImplementation implements StorageInterface {
 	public function saveAttendant(string $name, string $email, string $workshop) {
 		$statement = $this->pdo->prepare('INSERT INTO Attendant (id, name, workshop) VALUES (?,?,?)');
 		$statement->execute([$name, $email, $workshop]);
-
 	}
 
 }
