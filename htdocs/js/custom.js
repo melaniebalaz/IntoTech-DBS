@@ -15,26 +15,23 @@ $('#signup-form').submit(function(event) {
 });
 
 function findChosenWorkshop(){
-    var workshop;
+    var workshopID;
     $(':radio:checked').each(function(){
-         workshop=($(this).val());
+         workshopID =($(this).val());
     });
-    return workshop;
+    return workshopID;
 }
 
 function createAjaxCallForSignUp() {
 
-    var workshop = findChosenWorkshop();
-    if (workshop=="none"){
-        workshop="";
-    }
+    var workshopID = findChosenWorkshop();
     var name = $('#inputName').val();
     var email = $('#inputEmail').val();
 
     var data = {
         name: name,
         email: email,
-        workshop: workshop
+        workshopID: workshopID
     };
 
     var jsonString = JSON.stringify(data);

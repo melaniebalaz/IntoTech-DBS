@@ -8,7 +8,17 @@ use Melanie\Conference\Model\AttendantModel;
 
 interface StorageInterface {
 
-	function getAttendantCount():int;
-	function saveAttendant(string $name, string $email, string $workshop);
+	/**
+	 * @return integer
+	 */
+	function getAttendantCount();
+
+
+	function saveAttendant(string $name, string $email, string $workshopID);
+
+	/**
+	 * @return array of Workshops
+	 */
+	function getAllWorkshops();
 
 }

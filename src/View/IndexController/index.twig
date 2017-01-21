@@ -156,12 +156,20 @@
                 </div>
 
                 <!-- WORKSHOPS -->
-                <div class="form-check">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="radio" name="workshop" id="arduino" value="arduino">
-                        Arduino Workshop
-                    </label>
-                </div>
+
+                {% for workshop in workshops %}
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <p>{{ workshop.workshop_name }}</p>
+                            {{ workshop.workshopDescription }}
+                            <hr>
+                            Attendant Limit: {{ workshop.participants }}
+                            <input class="form-check-input" type="radio" name="workshopID" value={{ workshop.workshopID }}>
+                        </label>
+                    </div>
+                {% endfor %}
+
+
                 <div class="form-check">
                     <label class="form-check-label">
                         <input class="form-check-input" type="radio" name="workshop" id="vr" value="vr">
@@ -181,6 +189,7 @@
                     </label>
                 </div>
                 <!-- END WORKSHOPS -->
+
                 <hr>
                 <button type="submit" class="btn btn-lg" id="signup-btn">
                     SIGN UP

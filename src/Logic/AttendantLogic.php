@@ -26,7 +26,7 @@ class AttendantLogic {
 		$this->storageConnector->saveAttendant($name, $email, $workshop);
 	}
 
-	public function getAttendantCount() : int{
+	public function getAttendantCount(){
 		return ($this->storageConnector->getAttendantCount());
 	}
 

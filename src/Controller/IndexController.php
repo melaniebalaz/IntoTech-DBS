@@ -12,14 +12,17 @@ use Psr\Http\Message\ServerRequestInterface;
 class IndexController {
 
 	private $attendantLogic;
+	private $storage;
 
-	public function __construct(AttendantLogic $attendantLogic) {
+	public function __construct(AttendantLogic $attendantLogic, StorageInterface $storage) {
 		$this->attendantLogic = $attendantLogic;
+		$this->storage = $storage;
 	}
 
 	public function index() {
 		return [
 			'remainingTickets' => 200-$this->attendantLogic->getAttendantCount(),
+			'workshops' => $this->storage->getAllWorkshops()
 		];
 	}
 
@@ -50,14 +53,14 @@ class IndexController {
 		if (json_last_error()){
 			return json_encode(['success' => false]);
 		}
-		foreach (['name','email','workshop'] as $key){
+		foreach (['name','email','workshopID'] as $key){
 			if (!array_key_exists($key,$newAttendant)){
 				return json_encode(['success' => false]);
 			}
 		}
 		//if all goes well
 		try{
-			$this->attendantLogic->registerAttendant($newAttendant['name'],$newAttendant['email'],$newAttendant['workshop']);
+			$this->attendantLogic->registerAttendant($newAttendant['name'],$newAttendant['email'],$newAttendant['workshopID']);
 			return json_encode(['success' => true]);
 
 		} catch (\Exception $e) {

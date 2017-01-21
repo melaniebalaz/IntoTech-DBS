@@ -26,14 +26,19 @@ class DatabaseImplementation implements StorageInterface {
 
 
 	public function getAttendantCount():int {
-		$statement = $this->pdo->prepare('SELECT * FROM Attendants WHERE id=?');
+		$statement = $this->pdo->prepare('SELECT COUNT (*) FROM Attendants WHERE id=?');
 		return($statement->execute());
 
 	}
 
-	public function saveAttendant(string $name, string $email, string $workshop) {
-		$statement = $this->pdo->prepare('INSERT INTO Attendant (id, name, workshop) VALUES (?,?,?)');
-		$statement->execute([$name, $email, $workshop]);
+	public function saveAttendant(string $name, string $email, string $workshopID) {
+
+		$statement = $this->pdo->prepare('INSERT INTO Attendant (Attendant_Name, Email, WorkshopID) VALUES (?,?,?)');
+		$statement->execute([$name, $email, $workshopID]);
+	}
+
+	public function getAllWorkshops() {
+		// TODO: Implement getAllWorkshops() method.
 	}
 
 }
