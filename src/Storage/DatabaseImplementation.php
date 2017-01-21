@@ -5,6 +5,7 @@ namespace Melanie\Conference\Storage;
 
 
 use Melanie\Conference\Core\AbstractDatabaseMigration;
+use Melanie\Conference\DB\DatabaseConnection;
 use Melanie\Conference\Model\AttendantModel;
 use PDO;
 
@@ -12,15 +13,13 @@ class DatabaseImplementation implements StorageInterface {
 	/**
 	 * @var PDO
 	 */
-	private $pdo;
+	private $db;
 
 	/**
-	 * @param PDO $pdo
+	 * @param DatabaseConnection $db
 	 */
-
-
-	public function __construct(PDO $pdo) {
-		$this->pdo = $pdo;
+	public function __construct(DatabaseConnection $db) {
+		$this->db = $db;
 	}
 
 
@@ -43,8 +42,6 @@ class DatabaseImplementation implements StorageInterface {
 		// TODO: Implement getAllWorkshops() method.
 		$statement = $this->pdo->prepare('SELECT * FROM Workshop W INNER JOIN Event E ON W.Event_ID = E.Event_ID');
 		$queryResult = ($statement->execute());
-
-
 	}
 
 }

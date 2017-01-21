@@ -7,11 +7,9 @@ use PDO;
 
 class OracleMigration extends AbstractDatabaseMigration {
 
-	/**
-	 * @param PDO $pdo
-	 */
-	protected function execute(PDO $pdo) {
-		$pdo->query(/** @lang MySQL */
+
+	protected function execute() {
+		$this->db->query(/** @lang MySQL */
 			'
 				CREATE TABLE sometable (
 					id INT PRIMARY KEY AUTO_INCREMENT

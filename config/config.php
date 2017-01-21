@@ -1,6 +1,9 @@
 <?php
 
 use GuzzleHttp\Psr7\ServerRequest;
+use Melanie\Conference\DB\DatabaseConnection;
+use Melanie\Conference\DB\OCI8DatabaseConnection;
+use Melanie\Conference\DB\PDODatabaseConnection;
 use Melanie\Conference\Controller\ErrorController;
 use Melanie\Conference\Controller\IndexController;
 use Melanie\Conference\Core\DatabaseMigrationProcessor;
@@ -22,7 +25,7 @@ return [
 	 * keep it in mind when hunting bugs.
 	 */
 	'sharedObjects' => [
-		PDO::class
+		PDODatabaseConnection::class
 	],
 	/**
 	 * Interfaces are nice. You can list interfaces and their implementations here in order to create a dependency
@@ -36,7 +39,8 @@ return [
 	 */
 	'interfaceImplementations' => [
 		\Melanie\Conference\Storage\StorageInterface::class => \Melanie\Conference\Storage\DatabaseImplementation::class,
-		ServerRequestInterface::class => ServerRequest::class
+		ServerRequestInterface::class => ServerRequest::class,
+		DatabaseConnection::class => \Melanie\Conference\DB\OCI8DatabaseConnection::class
 	],
 	/**
 	 * Provide the class constructor parameters here. Remember, these are named parameters only, if you need classes,
@@ -67,10 +71,10 @@ return [
 		 *
 		 * @see http://php.net/manual/en/pdo.prepared-statements.php
 		 */
-		PDO::class => [
-			':dsn'      => 'oci:dbname =131.130.122.23:1521/lab',
+		OCI8DatabaseConnection::class => [
+			':connection_string'      => 'oci:dbname=131.130.122.23:1521/lab',
 			':username' => 'a1507236',
-			':passwd'   => 'afk600per',
+			':password'   => 'afk600per',
 		],
 		/**
 		 * Database migration classes.
