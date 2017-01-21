@@ -12,9 +12,9 @@ interface StorageInterface {
 	 * @return integer
 	 */
 	function getAttendantCount();
-
-
-	function saveAttendant(string $name, string $email, string $workshopID);
+	
+	
+	function saveAttendant(string $name, string $email, string $workshop);
 
 	/**
 	 * @return array of Workshops

@@ -7,7 +7,7 @@ namespace Melanie\Conference\Model;
 use InvalidArgumentException;
 use PDO;
 
-class AttendantModel {
+class Attendant {
 
 	private $name;
 	private $email;

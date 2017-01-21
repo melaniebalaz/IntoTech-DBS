@@ -76,6 +76,7 @@ return [
 			':username' => 'a1507236',
 			':password'   => 'afk600per',
 		],
+
 		/**
 		 * Database migration classes.
 		 */

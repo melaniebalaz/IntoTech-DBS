@@ -4,65 +4,113 @@
 namespace Melanie\Conference\Model;
 
 
-class WorkshopModel {
-
-	private $workshopID;
-	private $workshopDescription;
-	private $workshopName;
-	private $participants;
-	private $eventID;
+class Workshop {
 
 	/**
-	 * WorkshopModel constructor.
-	 * @param $workshopID
-	 * @param $workshopDescription
-	 * @param $workshopName
-	 * @param $participants
-	 * @param $requirements
-	 * @param $eventID
+	 * @var integer
 	 */
-	public function __construct($workshopID, $workshopDescription, $workshopName, $participants, $eventID) {
+	private $workshopID;
+
+	/**
+	 * @var string
+	 */
+	private $workshopDescription;
+
+	/**
+	 * @var string
+	 */
+	private $topic;
+
+	/**
+	 * @var \DateTime
+	 */
+	private $begintime;
+
+	/**
+	 * @var \DateTime
+	 */
+	private $endtime;
+
+	/**
+	 * @var string
+	 */
+	private $workshopName;
+
+	/**
+	 * @var integer
+	 */
+	private $participants;
+
+
+	/**
+	 * Workshop constructor.
+	 * @param int $workshopID
+	 * @param string $workshopDescription
+	 * @param string $topic
+	 * @param \DateTime $begintime
+	 * @param \DateTime $endtime
+	 * @param string $workshopName
+	 * @param int $participants
+	 */
+	public function __construct($workshopID, $workshopDescription, $topic, \DateTime $begintime, \DateTime $endtime, $workshopName, $participants) {
 		$this->workshopID = $workshopID;
 		$this->workshopDescription = $workshopDescription;
+		$this->topic = $topic;
+		$this->begintime = $begintime;
+		$this->endtime = $endtime;
 		$this->workshopName = $workshopName;
 		$this->participants = $participants;
-		$this->eventID = $eventID;
 	}
 
 	/**
-	 * @return integer
+	 * @return int
 	 */
-	public function getWorkshopID() {
+	public function getWorkshopID(): int {
 		return $this->workshopID;
 	}
 
+	/**
+	 * @return string
+	 */
+	public function getWorkshopDescription(): string {
+		return $this->workshopDescription;
+	}
 
 	/**
-	 * @return String
+	 * @return string
 	 */
-	public function getWorkshopName() {
+	public function getTopic(): string {
+		return $this->topic;
+	}
+
+	/**
+	 * @return \DateTime
+	 */
+	public function getBegintime(): \DateTime {
+		return $this->begintime;
+	}
+
+	/**
+	 * @return \DateTime
+	 */
+	public function getEndtime(): \DateTime {
+		return $this->endtime;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getWorkshopName(): string {
 		return $this->workshopName;
 	}
 
-
 	/**
-	 * @return integer
+	 * @return int
 	 */
-	public function getParticipants() {
+	public function getParticipants(): int {
 		return $this->participants;
 	}
 
-	/**
-	 * @return String
-	 */
-	public function getWorkshopDescription() {
-		return $this->workshopDescription;
-	}
-	/**
-	 * @return integer
-	 */
-	public function getEventID() {
-		return $this->eventID;
-	}
+
 
 }
