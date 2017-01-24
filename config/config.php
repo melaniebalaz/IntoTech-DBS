@@ -57,13 +57,13 @@ return [
 				500 => [ErrorController::class, 'error'],
 			],
 			':routes' => [
-				['GET', '/', IndexController::class, 'index'],
-				['GET', '/why', IndexController::class, 'why'],
-				['GET', '/location', IndexController::class, 'location'],
-				['GET', '/team', IndexController::class, 'team'],
-				['GET', '/workshops', IndexController::class, 'workshops'],
-				['GET', '/program', IndexController::class, 'program'],
-				['POST', '/register', IndexController::class, 'register']
+				['GET', '/~balazm96/', IndexController::class, 'index'],
+				['GET', '/~balazm96/why', IndexController::class, 'why'],
+				['GET', '/~balazm96/location', IndexController::class, 'location'],
+				['GET', '/~balazm96/team', IndexController::class, 'team'],
+				['GET', '/~balazm96/workshops', IndexController::class, 'workshops'],
+				['GET', '/~balazm96/program', IndexController::class, 'program'],
+				['POST', '/~balazm96/register', IndexController::class, 'register']
 			]
 		],
 		/**
@@ -72,7 +72,7 @@ return [
 		 * @see http://php.net/manual/en/pdo.prepared-statements.php
 		 */
 		OCI8DatabaseConnection::class => [
-			':connection_string'      => 'oci:dbname=131.130.122.23:1521/lab',
+			':connection_string'      => 'lab',
 			':username' => 'a1507236',
 			':password'   => 'afk600per',
 		],

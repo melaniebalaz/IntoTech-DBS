@@ -14,7 +14,7 @@ class OCI8DatabaseConnection implements DatabaseConnection {
 		$password,
 		$connection_string
 	) {
-		$this->connection = \oci_connect($username, $connection_string);
+		$this->connection = \oci_connect($username, $password, $connection_string);
 		if (!$this->connection) {
 			$error = oci_error();
 			throw new DatabaseException($error['message']);
